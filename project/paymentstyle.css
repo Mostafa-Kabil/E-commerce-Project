@@ -7,6 +7,10 @@
 body{
     background-color: whitesmoke;
 }
+header{
+    width: 100%;
+    height: fit-content;
+}
 .nav{
     margin: 0px 70px 0px 70px;
     display: flex;
@@ -30,7 +34,7 @@ body{
     color:black;
 }
 .nav .sections li a:hover{
-    color: whitesmoke;
+    color: pink;
 }
 .nav .navbut .cart{
     margin:10px 5px 0px 5px;
@@ -44,71 +48,95 @@ right: -20px
     left: 65px;
     bottom: 30px;
     height: 30px;
-    cursor:pointer;
+    cursor: pointer;
     display: none;
 }
-
-
-
-
-
-
-
-/*remove this part when you start your part*/
-header{
-    width: 100%;
-    height: 100vh;
-
-    background-color:pink;
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;    
+  min-height: 100px;
+  background-color: whitesmoke;
+  padding: 25px;
 }
-header .content{
-    justify-content: space-between;
-    text-align:center;
-    position: relative;
-    right: 300px;
-    top: 200px;
+
+.container form {
+  width: 700px;
+  padding: 40px;
+  background-color: white;
+  border-radius:10px;
+}
+
+form.row {
+    display: flex;
+    gap:20px;
+    flex-wrap: wrap;
+}
+
+.row.column{
+
+    flex: 1 1 250px;
+}
+
+.column.title {
+    font-size: 20px;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.column.input-box {
+    margin: 15px 0;
 
 }
-header .conter .text{
-    padding: 0px 150px 0px 150px;
+
+.input-box span{
+    display: block;
+    margin-bottom:10px ;
+}
+
+.input-box input{
+    width:100%;
+    padding: 15px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.column.flex{
+    display: flex;
+    gap: 20px;
+}
+
+.flex.input-box {
+    margin-top: 5px;
+}
+
+.input-box img{
+    height: 35px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
 
 }
-header .content h1{
 
+
+form .btn{
+    width:100%;
+    padding: 12px;
+    background-color: rgb(2, 141, 2);
+    border-radius:5px;
+    border:none;
+    outline: none;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 5px;
+    transition: .4s;
     font-weight: bold;
-    font-size: xx-large;
-}
-header .content p{
-
-    color: rgb(106, 103, 103);
-}
-header .content .explore{
-    color:white;
-    background-color: orangered;
-    border-radius: 10px;
-    border: none;
-    margin: 10px;
-    padding: 5px 15px 5px 15px;
-    font-weight: bold;
-    font-size: large;
-}
-header .content .explore:hover{
-    background-color: rgb(170, 49, 5);
-}
-header .content .homeimg{
-    max-height: 700px;
-    position: relative;
-    left: 700px;
-    bottom: 300px;
-    max-width: 450px;
-    margin:10px;
 }
 
-
-
-
-
-
+form .btn:hover{
+    background-color: rgb(2, 74, 2);
+}
 
 
 
@@ -180,6 +208,9 @@ footer .last_part li a:hover{
 
 
 @media(max-width:768px){
+    header{
+        height: fit-content;
+    }
 header .nav{
     padding: 0;
 }

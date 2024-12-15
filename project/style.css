@@ -30,7 +30,7 @@ body{
     color:black;
 }
 .nav .sections li a:hover{
-    color: whitesmoke;
+    color: pink;
 }
 .nav .navbut .cart{
     margin:10px 5px 0px 5px;
@@ -44,74 +44,109 @@ right: -20px
     left: 65px;
     bottom: 30px;
     height: 30px;
-    cursor:pointer;
+    cursor: pointer;
     display: none;
 }
 
+/* Cart Container */
+.cart-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
+.cart-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #444;
+}
 
-
-
-
-
-/*remove this part when you start your part*/
-header{
+/* Cart Table */
+.cart-table {
     width: 100%;
-    height: 100vh;
-
-    background-color:pink;
+    border-collapse: collapse;
+    margin-bottom: 20px;
 }
-header .content{
-    justify-content: space-between;
-    text-align:center;
-    position: relative;
-    right: 300px;
-    top: 200px;
 
+.cart-table thead tr {
+    background: #333;
+    color: white;
 }
-header .conter .text{
-    padding: 0px 150px 0px 150px;
 
+.cart-table th, .cart-table td {
+    padding: 10px;
+    text-align: center;
 }
-header .content h1{
 
-    font-weight: bold;
-    font-size: xx-large;
+.cart-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
-header .content p{
 
-    color: rgb(106, 103, 103);
+.cart-table .product-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
-header .content .explore{
-    color:white;
-    background-color: orangered;
-    border-radius: 10px;
+
+.cart-table .product-info img {
+    width: 80px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.cart-table input[type="number"] {
+    width: 60px;
+    padding: 5px;
+}
+
+.remove-btn {
+    background: #FF4C4C;
+    color: white;
     border: none;
-    margin: 10px;
-    padding: 5px 15px 5px 15px;
-    font-weight: bold;
-    font-size: large;
-}
-header .content .explore:hover{
-    background-color: rgb(170, 49, 5);
-}
-header .content .homeimg{
-    max-height: 700px;
-    position: relative;
-    left: 700px;
-    bottom: 300px;
-    max-width: 450px;
-    margin:10px;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
 }
 
+.remove-btn:hover {
+    background: #FF2C2C;
+}
 
+/* Cart Summary */
+.cart-summary {
+    text-align: right;
+}
 
+.cart-summary h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
 
+.cart-summary p {
+    text-align: right;
+    margin: 5px 0;
+}
 
+.cart-summary .checkout-btn {
+    background: #28A745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
+.cart-summary .checkout-btn:hover {
+    background: #218838;
+}
 
-
-
+/* Footer */
 footer{
     display: flex;
     justify-content: space-between;
@@ -132,7 +167,8 @@ footer .left_part p{
  footer .left_part .playstore,.appstore{
     width: 150px;
     position: relative;
-    left:50px
+    left:1px;
+    top:20px;
  }
 footer .middle_part{
     width: 35%;
@@ -142,7 +178,7 @@ footer .middle_part{
 footer .middle_part .logo{
     align-items: center;
     position: relative;
-    left: 120px;
+    left: 10px;
     height: 70px;
 }
 footer .middle_part p{
@@ -157,6 +193,9 @@ footer .right_part{
 footer .right_part h4{
     color: white;
 }
+footer .right_part li{
+    list-style: none;
+}
 footer .right_part ul li a{
     color: gray;
     text-decoration: none;
@@ -170,6 +209,9 @@ footer .last_part{
 footer .last_part h4{
     color: white;
 }
+footer .last_part li{
+    list-style: none;
+ }
 footer .last_part li a{
     color: gray;
     text-decoration: none;
@@ -178,8 +220,22 @@ footer .last_part li a:hover{
     color: pink;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
 
-@media(max-width:768px){
+
+    .cart-table th, .cart-table td {
+        font-size: 14px;
+    }
+
+    .cart-summary {
+        text-align: center;
+    }
+
+    .cart-summary .checkout-btn {
+        width: 100%;
+    }
+    
 header .nav{
     padding: 0;
 }
@@ -238,8 +294,10 @@ footer .left_part p,h4{
 }
 footer .left_part .playstore,.appstore{
     position: relative;
-    left:1px
+    left:1px;
+    top:0;
 }
+
 footer .middle_part .logo{
     width: 150px;
     position: relative;
@@ -255,10 +313,6 @@ footer .right_part{
     position: relative;
     left: 130px;
 }
-footer .right_part h4{
-    position: relative;
-    left: 30px;
-}
 footer .right_part li{
     position: relative;
     left: 30px;
@@ -270,7 +324,7 @@ footer .last_part{
 }
 footer .last_part h4{
     position: relative;
-    left: 10px
+    right: 40px
 }
 footer .last_part li{
     position: relative;
@@ -282,3 +336,4 @@ footer{
 }
 
 }
+

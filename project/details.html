@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="Home_page_style.css">
-    <title>RedStore</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Product Details</title>
 </head>
 <body>
     <header>
@@ -23,16 +23,42 @@
                     <img class="menu" src="menu.png">
             </div>
         </nav>
-        <div class="content">
-            <div class="text">
-            <h1>Give Your Workout A New Style!</h1>
-            <p>Success isn't always about greatness. It's about consistency. Consistent
-                hard work gains success. Greatness will come.</p>
-            <a href="productlist.html"><button class="explore">Explore Now</button></a>
-            </div>
-            <img class="homeimg" src="image1.png">
+<section class="sproduct" >
+  <div class="row" >
+    <div class="product-imgs">
+        <img class="main-img" src="product-12.jpg">
+        
+        <div class="small-img-group">
+          <div class="small-img-col">
+            <img src="product-5.jpg"width="100%"class="small-img">
         </div>
-    </header>
+        <div class="small-img-col">
+            <img src="product-11.jpg"width="100%"class="small-img">
+        </div>
+    </div>
+  
+    <div class="product-d">
+        <h3 class="title">lace-fastening white shoes</h3>
+        <h2 class="price">$21.00</h2>
+        <select class="size">
+            <option>select size</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+        </select>
+        <div class="quantity">
+        <input type="number" value="1">
+        </div>
+        <div class="p-detalis">
+        <h4>product details</h4>
+        <span>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</span>
+        <button class="buy-button">Add to cart</button>
+    </div>
+    </div>
+
+  </section>   
+</header>
 </body>
 <footer>
     <div class="left_part">
@@ -64,11 +90,4 @@
         </ul>
     </div>
 </footer>
-<script>
-    const menu = document.querySelector('.menu')
-    const sections = document.querySelector('.sections')
-    menu.addEventListener('click', () => {
-        sections.classList.toggle('menu')
-    })
-</script>
 </html>
